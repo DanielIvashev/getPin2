@@ -1,7 +1,15 @@
-# Vue 3 + Vite
+# GetPin v2
+## Powered by Yarandin Team
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+[![N|Solid](https://avatars.githubusercontent.com/u/83405733?s=200&v=4)](https://www.yarandin.com/en)
 
-## Recommended IDE Setup
+## Installation
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+GetPin v2 requires [Node.js](https://nodejs.org/) v16+ to run.
+
+Install the dependencies and devDependencies and start the server.
+
+```shr
+npm i
+npm run dev
+```
