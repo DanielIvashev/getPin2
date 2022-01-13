@@ -1,21 +1,18 @@
-<script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
+  <q-btn @click="clickHandler">Button</q-btn>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<script>
+import Repository from '@/repositories/repositoryFactory';
+
+const PostRepository = Repository.get('posts');
+
+export default {
+  name: 'App',
+  methods: {
+    clickHandler() {
+      PostRepository.get2();
+    },
+  },
+};
+</script>

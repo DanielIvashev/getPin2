@@ -1,15 +1,25 @@
-import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
-import compress from "vite-plugin-compress";
-import { babel } from "@rollup/plugin-babel";
+import { defineConfig } from 'vite';
+import { babel } from '@rollup/plugin-babel';
+import { quasar, transformAssetUrls } from '@quasar/vite-plugin';
+import vue from '@vitejs/plugin-vue';
+import compress from 'vite-plugin-compress';
 
-const path = require("path");
+const path = require('path');
 
 export default defineConfig({
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      '@': path.resolve(__dirname, './src'),
     },
   },
-  plugins: [vue(), compress(), babel({ babelHelpers: "bundled" })],
+  plugins: [
+    vue({
+      template: { transformAssetUrls },
+    }),
+    compress(),
+    quasar({
+      sassVariables: '@/styles/_quasar-variables.scss',
+    }),
+    babel({ babelHelpers: 'bundled' }),
+  ],
 });
