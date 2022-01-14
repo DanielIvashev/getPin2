@@ -1,0 +1,9 @@
+.header {
+  &__logo {
+    width: 120px;
+  }
+  &__logo-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -1,18 +1,22 @@
 <template>
-  <q-btn @click="clickHandler">Button</q-btn>
+  <main-layout />
 </template>
 
 <script>
-import Repository from '@/repositories/repositoryFactory';
+// import Repository from '@/repositories/repositoryFactory';
 
-const PostRepository = Repository.get('posts');
+// const PostRepository = Repository.get('posts');
+import MainLayout from '@/layouts/MainLayout.vue';
 
 export default {
   name: 'App',
-  methods: {
-    clickHandler() {
-      PostRepository.get2();
-    },
+  components: {
+    MainLayout,
   },
+  data() {
+    return {};
+  },
+
+  methods: {},
 };
 </script>

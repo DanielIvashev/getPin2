@@ -1,7 +1,21 @@
-const Home = { template: '<div>Home</div>' };
-const About = { template: '<div>About</div>' };
+const Dashboard = () => import('../pages/Dashboard.vue');
+const Locations = () => import('../pages/Locations.vue');
+const Statistics = () => import('../pages/Statistics.vue');
 
 export const routes = [
-  { path: '/', component: Home },
-  { path: '/about', component: About },
+  {
+    path: '/locations',
+    name: 'Locations',
+    component: Locations,
+  },
+  {
+    path: '/statistics',
+    name: 'Statistics',
+    component: Statistics,
+  },
+  {
+    path: '/',
+    name: 'Dashboard',
+    component: Dashboard,
+  },
 ];

@@ -2,12 +2,16 @@ import { createStore } from 'vuex';
 import { rootActions } from './rootActions';
 import { rootGetters } from './rootGetters';
 import { rootMutations } from './rootMutations';
+import { navigation } from './modules/navigation';
+import { themeTogglerMiddleware } from './middlewares';
 
 export const store = createStore({
-  modules: {},
+  modules: {
+    navigation,
+  },
   state() {
     return {
-      count: 0,
+      isLightTheme: true,
     };
   },
   getters: {
@@ -19,4 +23,5 @@ export const store = createStore({
   actions: {
     ...rootActions,
   },
+  plugins: [themeTogglerMiddleware],
 });

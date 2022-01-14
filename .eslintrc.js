@@ -24,6 +24,7 @@ module.exports = {
     ],
     'no-underscore-dangle': 0,
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'import/core-modules': [ 'ember' ],
     indent: ['error', 2],
     'no-param-reassign': [2, { props: false }],
     'import/prefer-default-export': 'off',
