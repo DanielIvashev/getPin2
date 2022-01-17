@@ -1,5 +1,5 @@
 export const rootMutations = {
-  increment(state) {
-    state.count++;
+  TOGGLE_THEME(state) {
+    state.isLightTheme = !state.isLightTheme;
   },
 };

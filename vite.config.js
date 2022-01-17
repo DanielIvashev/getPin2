@@ -10,6 +10,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
+      vue: 'vue/dist/vue.esm-bundler.js',
     },
   },
   plugins: [
@@ -22,4 +23,10 @@ export default defineConfig({
     }),
     babel({ babelHelpers: 'bundled' }),
   ],
+  config: {
+    dark: 'false',
+    server: {
+      host: '0.0.0.0',
+    },
+  },
 });
