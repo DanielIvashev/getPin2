@@ -9,6 +9,7 @@
       />
     </q-list>
     <locales-handler />
+    <q-btn color="black" label="Logout" @click="logoutHandler"/>
   </q-drawer>
 </template>
 
@@ -32,12 +33,14 @@ export default {
         return this.getDrawerState;
       },
       set(event) {
-        this.SET_DRAWER_OPEN({ value: event });
+        this.$store.commit('navigation/SET_DRAWER_OPEN', { value: event });
       },
     },
   },
   methods: {
-    ...mapMutations('navigation', ['SET_DRAWER_OPEN']),
+    logoutHandler() {
+      this.$store.dispatch('auth/logout')
+    }
   },
 };
 </script>

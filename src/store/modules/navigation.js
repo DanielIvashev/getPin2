@@ -32,7 +32,6 @@ export const navigation = {
         to: { name: 'Statistics' },
       },
     ],
-    headerTitle: 'GetPin 2.0',
   }),
   mutations: {
     SET_DRAWER_OPEN(state, { value }) {
