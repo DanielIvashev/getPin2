@@ -12,6 +12,9 @@ export const store = createStore({
   state() {
     return {
       isLightTheme: true,
+      locale: '',
+      localeLoading: false,
+      localeError: null,
     };
   },
   getters: {

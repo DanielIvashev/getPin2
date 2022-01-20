@@ -28,5 +28,8 @@ export default {
   data() {
     return {};
   },
+  mounted () {
+    this.$store.dispatch('initialize')
+  }
 };
 </script>
