@@ -6,6 +6,9 @@ const defaultOptions = {
   locale: 'en',
   fallbackLocale: 'en',
   legacy: true,
+  missing(locale, key, vm, values) {
+    return 'loading...';
+  },
 };
 function setupI18n(options = defaultOptions) {
   const i18n = createI18n(options);

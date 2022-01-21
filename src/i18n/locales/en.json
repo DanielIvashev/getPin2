@@ -1,5 +1,6 @@
 {
   "messages": {
-    "hello": "{msg} hello"
+    "hello": "{msg} hello",
+    "authorization": "Authorisation"
   }
 }
