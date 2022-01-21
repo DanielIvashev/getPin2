@@ -7,6 +7,7 @@ const NotFound = () => import('../pages/NotFound.vue');
 import guest from './middlewares/guest';
 import auth from './middlewares/auth';
 
+// always add NAME for route!
 export const routes = [
   {
     path: '/',

@@ -1,5 +1,10 @@
 <template>
-  <component :is="layout" />
+  <div v-if='!$route.name'>
+    <q-inner-loading showing>
+      <q-spinner-gears size="50px" color="primary" />
+    </q-inner-loading>
+  </div>
+  <component v-else :is="layout" />
 </template>
 
 <script>
@@ -22,6 +27,9 @@ export default {
     layout() {
       return this.$route.meta.layout || 'main-layout'
     }
+  },
+  mounted () {
+    this.$store.dispatch('initialize')
   },
   methods: {},
 };

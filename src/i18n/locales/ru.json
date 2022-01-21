@@ -1,5 +1,6 @@
 {
   "messages": {
-    "hello": "{msg} привет"
+    "hello": "{msg} привет",
+    "authorization": "Авторизация"
   }
 }

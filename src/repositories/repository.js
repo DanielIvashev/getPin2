@@ -115,12 +115,12 @@ apiClient.interceptors.response.use(
             processQueue(null, data.token); // Resolve queued
             resolve(axios(originalRequest)); // Resolve current
           })
+          .then(() => {
+            isRefreshing = false;
+          })
           .catch((err) => {
             processQueue(err, null);
             reject(err);
-          })
-          .then(() => {
-            isRefreshing = false;
           });
       });
     }

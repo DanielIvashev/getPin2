@@ -29,4 +29,5 @@ export const store = createStore({
     ...rootActions,
   },
   plugins: [themeTogglerMiddleware],
+  strict: true,
 });
