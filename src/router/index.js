@@ -16,10 +16,11 @@ export const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  if (!to.meta.middleware) {
+  const middleware = to.meta.middleware;
+
+  if (!middleware) {
     return next();
   }
-  const middleware = to.meta.middleware;
 
   const context = {
     to,
